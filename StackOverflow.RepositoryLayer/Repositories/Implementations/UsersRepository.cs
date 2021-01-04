@@ -40,7 +40,7 @@ namespace StackOverflow.RepositoryLayer.Repositories.Implementations
 
         public void UpdatePassword(User model)
         {
-            
+            _dbContext.Entry(model).State = EntityState.Modified;
         }
 
         public User GetByEmail(string email)
