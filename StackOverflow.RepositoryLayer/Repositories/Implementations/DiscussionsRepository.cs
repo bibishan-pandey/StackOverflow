@@ -18,7 +18,7 @@ namespace StackOverflow.RepositoryLayer.Repositories.Implementations
 
         public IQueryable<Discussion> GetList()
         {
-            return _dbContext.Discussions;
+            return _dbContext.Discussions.OrderByDescending(d => d.CreatedAt);
         }
 
         public Discussion GetById(int id)
