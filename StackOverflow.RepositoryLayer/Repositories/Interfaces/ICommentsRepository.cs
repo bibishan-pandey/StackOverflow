@@ -1,0 +1,10 @@
+﻿using StackOverflow.DomainModels.Models;
+using StackOverflow.RepositoryLayer.Repositories.Generics;
+
+namespace StackOverflow.RepositoryLayer.Repositories.Interfaces
+{
+    public interface ICommentsRepository : IGenericRepository<Comment>
+    {
+        int CountCommentVotes(int commentId);
+    }
+}
