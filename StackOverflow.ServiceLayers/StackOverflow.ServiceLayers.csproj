@@ -48,6 +48,10 @@
       <Project>{16834da3-61a7-480b-a852-13ee502a7b74}</Project>
       <Name>StackOverflow.DomainModels</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StackOverflow.RepositoryLayer\StackOverflow.RepositoryLayers.csproj">
+      <Project>{884c3d29-78a9-49fb-b89e-8233b8abe6cf}</Project>
+      <Name>StackOverflow.RepositoryLayers</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
