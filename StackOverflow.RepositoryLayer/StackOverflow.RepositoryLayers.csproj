@@ -59,7 +59,9 @@
     <Compile Include="Repositories\Generics\IGenericInsertRepository.cs" />
     <Compile Include="Repositories\Generics\IGenericDeleteRepository.cs" />
     <Compile Include="Repositories\Generics\IGenericUpdateRepository.cs" />
+    <Compile Include="Repositories\Implementations\CategoriesRepository.cs" />
     <Compile Include="Repositories\Implementations\UsersRepository.cs" />
+    <Compile Include="Repositories\Interfaces\ICategoriesRepository.cs" />
     <Compile Include="Repositories\Interfaces\IUsersRepository.cs" />
   </ItemGroup>
   <ItemGroup>
