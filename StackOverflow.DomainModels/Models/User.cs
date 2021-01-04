@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace StackOverflow.DomainModels
+namespace StackOverflow.DomainModels.Models
 {
     public class User
     {
