@@ -60,6 +60,7 @@
     <Compile Include="Repositories\Generics\IGenericDeleteRepository.cs" />
     <Compile Include="Repositories\Generics\IGenericUpdateRepository.cs" />
     <Compile Include="Repositories\Implementations\CommentsRepository.cs" />
+    <Compile Include="Repositories\Implementations\VotesRepository.cs" />
     <Compile Include="Repositories\Implementations\VoteTypesRepository.cs" />
     <Compile Include="Repositories\Implementations\CategoriesRepository.cs" />
     <Compile Include="Repositories\Implementations\DiscussionsRepository.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Repositories\Interfaces\ICommentsRepository.cs" />
     <Compile Include="Repositories\Interfaces\IDiscussionsRepository.cs" />
     <Compile Include="Repositories\Interfaces\IUsersRepository.cs" />
+    <Compile Include="Repositories\Interfaces\IVotesRepository.cs" />
     <Compile Include="Repositories\Interfaces\IVoteTypesRepository.cs" />
   </ItemGroup>
   <ItemGroup>
