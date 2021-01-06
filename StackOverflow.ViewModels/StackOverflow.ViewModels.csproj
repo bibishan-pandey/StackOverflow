@@ -63,6 +63,8 @@
     <Compile Include="ViewModels\RegisterViewModel.cs" />
     <Compile Include="ViewModels\UserPasswordViewModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
+    <Compile Include="ViewModels\VoteTypeViewModel.cs" />
+    <Compile Include="ViewModels\VoteViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
