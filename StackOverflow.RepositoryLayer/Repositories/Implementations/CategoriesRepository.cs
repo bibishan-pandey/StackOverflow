@@ -29,17 +29,20 @@ namespace StackOverflow.RepositoryLayer.Repositories.Implementations
         public void Insert(Category model)
         {
             _dbContext.Categories.Add(model);
+            Save();
         }
 
         public void Update(Category model)
         {
             _dbContext.Entry(model).State = EntityState.Modified;
+            Save();
         }
 
         public void Delete(int? id)
         {
             var category = _dbContext.Categories.Find(id);
             _dbContext.Categories.Remove(category ?? throw new InvalidOperationException());
+            Save();
         }
 
         public void Save()

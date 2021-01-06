@@ -69,7 +69,6 @@ namespace StackOverflow.ServiceLayers.Services
             var user = mapper.Map<RegisterViewModel, User>(model);
             user.Password = Sha256HashGenerator.GenerateHash(model.Password);
             _usersRepository.Insert(user);
-            _usersRepository.Save();
             return _usersRepository.GetRecentUser();
         }
 
@@ -84,7 +83,6 @@ namespace StackOverflow.ServiceLayers.Services
             //var mapper = config.CreateMapper();
             var user = mapper.Map<UserViewModel, User>(model);
             _usersRepository.Update(user);
-            _usersRepository.Save();
         }
 
         public void UpdatePassword(UserPasswordViewModel model)
@@ -99,7 +97,6 @@ namespace StackOverflow.ServiceLayers.Services
             var user = mapper.Map<UserPasswordViewModel, User>(model);
             user.Password = Sha256HashGenerator.GenerateHash(model.Password);
             _usersRepository.UpdatePassword(user);
-            _usersRepository.Save();
         }
 
         public void Delete(int? id)

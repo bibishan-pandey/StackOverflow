@@ -29,11 +29,13 @@ namespace StackOverflow.RepositoryLayer.Repositories.Implementations
         public void Insert(Comment model)
         {
             _dbContext.Comments.Add(model);
+            Save();
         }
 
         public void Update(Comment model)
         {
             _dbContext.Entry(model).State = EntityState.Modified;
+            Save();
         }
 
         public int CountCommentVotes(int commentId)
@@ -48,6 +50,7 @@ namespace StackOverflow.RepositoryLayer.Repositories.Implementations
         {
             var comment = _dbContext.Comments.Find(id);
             _dbContext.Comments.Remove(comment ?? throw new InvalidOperationException());
+            Save();
         }
 
         public void Save()

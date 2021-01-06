@@ -29,17 +29,20 @@ namespace StackOverflow.RepositoryLayer.Repositories.Implementations
         public void Insert(Discussion model)
         {
             _dbContext.Discussions.Add(model);
+            Save();
         }
 
         public void Update(Discussion model)
         {
             _dbContext.Entry(model).State = EntityState.Modified;
+            Save();
         }
 
         public void Delete(int? id)
         {
             var discussion = _dbContext.Discussions.Find(id);
             _dbContext.Discussions.Remove(discussion ?? throw new InvalidOperationException());
+            Save();
         }
 
         public int CountDiscussionVotes(int discussionId)

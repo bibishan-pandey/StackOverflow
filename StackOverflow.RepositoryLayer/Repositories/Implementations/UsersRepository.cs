@@ -31,16 +31,19 @@ namespace StackOverflow.RepositoryLayer.Repositories.Implementations
         public void Insert(User model)
         {
             _dbContext.Users.Add(model);
+            Save();
         }
 
         public void Update(User model)
         {
             _dbContext.Entry(model).State = EntityState.Modified;
+            Save();
         }
 
         public void UpdatePassword(User model)
         {
             _dbContext.Entry(model).State = EntityState.Modified;
+            Save();
         }
 
         public User GetByEmail(string email)
@@ -68,6 +71,7 @@ namespace StackOverflow.RepositoryLayer.Repositories.Implementations
         {
             var user = _dbContext.Users.Find(id);
             _dbContext.Users.Remove(user ?? throw new InvalidOperationException());
+            Save();
         }
 
         public void Save()
