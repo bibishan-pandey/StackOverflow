@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace StackOverflow.ViewModels.ViewModels
@@ -19,5 +20,17 @@ namespace StackOverflow.ViewModels.ViewModels
         [Required]
         [DisplayName("Category")]
         public int CategoryId { get; set; }
+
+        [Required]
+        [DisplayName("User")]
+        public int UserId { get; set; }
+
+        [Required]
+        [DisplayName("Views")]
+        public int Views { get; set; }
+
+        public UserViewModel User { get; set; }
+        public CategoryViewModel Category { get; set; }
+        public virtual List<CommentViewModel> Comments { get; set; }
     }
 }
