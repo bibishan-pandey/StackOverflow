@@ -5,8 +5,6 @@ namespace StackOverflow.ViewModels.ViewModels
 {
     public class NewDiscussionViewModel
     {
-        public int Id { get; set; }
-
         [Required]
         [DisplayName("Discussion Title")]
         public string DiscussionTitle { get; set; }
